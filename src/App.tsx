@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import "@coreui/coreui/dist/css/coreui.min.css";
 import {
   useNavigate,
   createBrowserRouter,
   RouterProvider,
   Link,
 } from "react-router-dom";
+import About from "./About";
 
 const Home = () => {
   return (
@@ -27,17 +28,6 @@ function App() {
     </div>
   );
 }
-const About = () => {
-  const navigate = useNavigate();
-  const onClick = () => {
-    navigate("/");
-  };
-  return (
-    <div>
-      <button onClick={onClick}>BACK</button>
-    </div>
-  );
-};
 
 // add Home component to the following array, with path as 'home'
 const router = createBrowserRouter([
