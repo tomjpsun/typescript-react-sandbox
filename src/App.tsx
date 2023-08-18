@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./scss/style.scss";
 import "./App.css";
-
+import logger from "./loggers";
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 import About from "./About";
 
@@ -19,6 +19,7 @@ const Home = () => {
 };
 
 function App() {
+  logger.info("test log [sandbox]! pinotest stream from reactjs application.");
   return (
     <div className="App">
       <RouterProvider router={router} />
