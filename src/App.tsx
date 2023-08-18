@@ -12,6 +12,7 @@ const Home = () => {
       <img src={logo} className="App-logo" alt="logo" />
       <p>
         Edit <code>src/App.tsx</code> and save to reload.
+        <Link to="/about">About</Link>
       </p>
     </header>
   );
@@ -27,23 +28,12 @@ function App() {
 
 // add Home component to the following array, with path as 'home'
 const router = createBrowserRouter([
-  // show <h1> hello </h1> and a link to /about
-  {
-    path: "/",
-    element: (
-      <div>
-        <h1>hello</h1>
-        <Link to="/about">About</Link>
-      </div>
-    ),
-  },
-
   {
     path: "about",
     element: <About></About>,
   },
   {
-    path: "home",
+    path: "/",
     element: <Home></Home>,
   },
 ]);

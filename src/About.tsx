@@ -6,6 +6,7 @@ import {
   CCardTitle,
   CCardText,
   CButton,
+  CContainer,
 } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
 
@@ -15,7 +16,7 @@ const About = () => {
     navigate("/");
   };
   return (
-    <div>
+    <CContainer fluid>
       <CCard>
         <CCardHeader>Header</CCardHeader>
         <CCardBody>
@@ -27,7 +28,7 @@ const About = () => {
           <CButton onClick={onClick}>Go back</CButton>
         </CCardBody>
       </CCard>
-    </div>
+    </CContainer>
   );
 };
 export default About;
