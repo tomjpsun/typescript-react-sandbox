@@ -1,13 +1,9 @@
 import React from "react";
 import logo from "./logo.svg";
+import "./scss/style.scss";
 import "./App.css";
-import "@coreui/coreui/dist/css/coreui.min.css";
-import {
-  useNavigate,
-  createBrowserRouter,
-  RouterProvider,
-  Link,
-} from "react-router-dom";
+
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 import About from "./About";
 
 const Home = () => {
