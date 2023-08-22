@@ -8,10 +8,12 @@ interface LogMessage {
 }
 const myLogger = () => {
   //"24/Jan/2023:14:12:15 +0000"
+  const date = new Date();
+  const dateStr = date.toLocaleString();
 
   const msg: LogMessage = {
     id: "434a5f5e-2f5f-11ed-a261-0242ac120002",
-    datetime: Date.now().toString(),
+    datetime: dateStr,
     host: "127.0.0.1",
     "user-identifier": "Mozilla/5.0 Gecko/20100101 Firefox/64.0",
     level: 100,
