@@ -8,7 +8,7 @@ import About from "./About";
 
 const Home = () => {
   const handleClick = () => {
-    myLogger();
+    myLogger('App started');
   };
   return (
     <header className="App-header">

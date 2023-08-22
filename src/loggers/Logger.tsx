@@ -1,12 +1,18 @@
+enum LogFlow {
+  NET = "net",
+  NORMAL = "normal",
+  ERROR = "error",
+}
 interface LogMessage {
   id: string;
   datetime: string;
   host: string;
   "user-identifier": string;
   level: number;
+  flow: LogFlow;
   message: string;
 }
-const myLogger = () => {
+const myLogger = (message: string, flow: LogFlow = LogFlow.NORMAL) => {
   //"24/Jan/2023:14:12:15 +0000"
   const date = new Date();
   const dateStr = date.toLocaleString();
@@ -17,7 +23,8 @@ const myLogger = () => {
     host: "127.0.0.1",
     "user-identifier": "Mozilla/5.0 Gecko/20100101 Firefox/64.0",
     level: 100,
-    message: "default log message",
+    flow: flow,
+    message: message,
   };
 
   const dataToSend = JSON.stringify(msg);
@@ -27,7 +34,7 @@ const myLogger = () => {
       "Content-Type": "application/json",
       "X-P-META-meta1": "value1",
       "X-P-TAG-tag1": "value1",
-      "X-P-Stream": "demo",
+      "X-P-Stream": "stream",
       Authorization: "Basic YWRtaW46YWRtaW4=",
     },
     body: dataToSend,
