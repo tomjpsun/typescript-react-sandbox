@@ -5,6 +5,7 @@ import "./App.css";
 import myLogger from "./loggers/Logger";
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 import About from "./About";
+import Sidebar from "./frames/Sidebar";
 
 const Home = () => {
   const handleClick = () => {
@@ -12,8 +13,8 @@ const Home = () => {
   };
   return (
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
       <p>
+        <Sidebar></Sidebar>
         <button onClick={handleClick}> Click </button>{" "}
       </p>
       <p>

@@ -17,5 +17,5 @@
     "noEmit": false,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/*.tsx", "src/custom.d.ts"]
+  "include": ["src/**/*.tsx", "src/custom.d.ts", "src/frames/Sidebar.js"]
 }
