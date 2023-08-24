@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@coreui/coreui": "^4.3.0",
     "@coreui/react": "^5.0.0-alpha.0",
     "@react-navigation/native": "^6.1.7",
     "@testing-library/jest-dom": "^5.17.0",
